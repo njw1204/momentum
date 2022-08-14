@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "VGA";
+  src: url(../assets/Perfect\ DOS\ VGA\ 437.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  color: #ffff55;
+  background-color: #0000aa;
+  font-size: 32px;
+  font-family: "VGA", sans-serif;
+}
+
+body.global-dark {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+input,
+input:focus,
+button,
+button:focus {
+  padding: 2px 4px;
+  color: #ffffff;
+  background-color: #aa0000;
+  font-size: 32px;
+  font-family: "VGA", sans-serif;
+  border: none;
+  outline: none;
+}
+
+.global-dark input,
+.global-dark input:focus,
+.global-dark button,
+.global-dark button:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather {
+  text-align: center;
+}
+
+.digital-clock {
+  font-size: 144px;
+  text-align: center;
+}
+
+.todo-form {
+  display: block;
+  width: 100%;
+}
+
+.todo-form-input {
+  display: block;
+  width: 100%;
+}
+
+.todo-list {
+  display: inline-block;
+}
+
+.todo-record {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.todo-record.finished .todo-record-message {
+  text-decoration: line-through;
+}
+
+.todo-record::before {
+  content: "☐";
+  margin-right: 8px;
+}
+
+.todo-record.finished::before {
+  content: "☑";
+  margin-right: 8px;
+}
+
+.todo-remove-button {
+  display: inline-block;
+  margin-left: 8px;
+  color: #aa0000;
+  cursor: default;
+}
