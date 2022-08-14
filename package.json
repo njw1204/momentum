@@ -1,0 +1,16 @@
+{
+  "name": "momentum",
+  "version": "1.0.0",
+  "repository": "https://github.com/njw1204/momentum.git",
+  "homepage": "https://njw1204.github.io/momentum",
+  "author": "Na Jongwoo <njw1204@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "serve src/",
+    "deploy": "gh-pages -d src"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "serve": "^14.0.1"
+  }
+}
