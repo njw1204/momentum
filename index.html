@@ -5,6 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Momentum</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/storage.js" defer></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/user.js" defer></script>
+    <script src="js/index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div id="login_page" class="hidden">
+      <form id="login_form" class="login-form">
+        <div style="margin: 0 0 16px">What is your name?</div>
+        <input
+          id="login_form_name_input"
+          maxlength="20"
+          placeholder="My name is..."
+          autocomplete="off"
+          required
+        />
+      </form>
+    </div>
+    <div id="main_page" class="hidden">
+      <div class="profile-nav">
+        <div id="profile"></div>
+        <button type="button" id="logout_button">Logout</button>
+      </div>
+      <div id="digital_clock" class="digital-clock"></div>
+      <div id="weather" class="weather"></div>
+      <ul id="todo_list" class="todo-list" style="margin: 48px 0 16px"></ul>
+      <form id="todo_form" class="todo-form">
+        <input
+          id="todo_form_input"
+          class="todo-form-input"
+          placeholder="Lorem"
+          autocomplete="off"
+          required
+        />
+      </form>
+    </div>
+  </body>
 </html>
