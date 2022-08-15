@@ -22,8 +22,8 @@ body {
 }
 
 body.global-dark {
-  color: #ffffff;
-  background-color: #000000;
+  color: #f3f3f3;
+  background-color: #131313;
 }
 
 input,
@@ -31,7 +31,7 @@ input:focus,
 button,
 button:focus {
   padding: 2px 4px;
-  color: #ffffff;
+  color: #f3f3f3;
   background-color: #aa0000;
   font-size: 32px;
   font-family: "VGA", sans-serif;
@@ -43,8 +43,8 @@ button:focus {
 .global-dark input:focus,
 .global-dark button,
 .global-dark button:focus {
-  color: #000000;
-  background-color: #ffffff;
+  color: #131313;
+  background-color: #f3f3f3;
 }
 
 input {
