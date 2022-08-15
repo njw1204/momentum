@@ -185,9 +185,9 @@ function init() {
     showPage("login");
   });
 
-  const theme = Math.floor(Math.random() * 7);
+  const theme = Math.floor(Math.random() * 2);
 
-  if (theme === 0) {
+  if (theme === 1) {
     document.querySelector("body").classList.add("global-dark");
   }
 
