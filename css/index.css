@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  cursor: url(../assets/w98normal.cur), auto;
+}
+
 body {
   margin: 0;
   padding: 16px;
@@ -42,9 +46,13 @@ button:focus {
   background-color: #ffffff;
 }
 
+input {
+  cursor: url(../assets/w98normal.cur), auto;
+}
+
 input[type="submit"],
 button {
-  cursor: pointer;
+  cursor: url(../assets/w98hand.cur), pointer;
 }
 
 ul,
@@ -92,11 +100,11 @@ li {
 
 .todo-list {
   display: inline-block;
+  cursor: url(../assets/w98hand.cur), pointer;
 }
 
 .todo-record {
   display: inline-block;
-  cursor: pointer;
 }
 
 .todo-record.finished .todo-record-message {
@@ -117,5 +125,5 @@ li {
   display: inline-block;
   margin-left: 8px;
   color: #aa0000;
-  cursor: default;
+  cursor: url(../assets/w98normal.cur), default;
 }
