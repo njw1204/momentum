@@ -19,3 +19,8 @@ function toggleMusic() {
     mAudio.pause();
   }
 }
+
+function stopMusic() {
+  mAudio.pause();
+  mAudio.currentTime = 0;
+}

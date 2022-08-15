@@ -31,6 +31,7 @@ function showPage(type) {
 
 function initLoginPage() {
   saveObj("todos", null);
+  stopMusic();
   document.getElementById("login_form_name_input").value = "";
 }
 
