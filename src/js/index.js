@@ -193,12 +193,20 @@ function init() {
   }
 
   subscribeClock((now) => {
-    const text = `${String(now.getHours()).padStart(2, "0")}:${String(
-      now.getMinutes()
-    ).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`;
+    const html = `${String(now.getHours()).padStart(
+      2,
+      "0"
+    )}<span class="clock-tick${
+      now.getMilliseconds() >= 500 ? " high" : ""
+    }">:</span>${String(now.getMinutes()).padStart(
+      2,
+      "0"
+    )}<span class="clock-tick${
+      now.getMilliseconds() >= 500 ? " high" : ""
+    }">:</span>${String(now.getSeconds()).padStart(2, "0")}`;
 
-    if (document.getElementById("digital_clock").innerText !== text) {
-      document.getElementById("digital_clock").innerText = text;
+    if (document.getElementById("digital_clock").innerHTML !== html) {
+      document.getElementById("digital_clock").innerHTML = html;
     }
   });
 
