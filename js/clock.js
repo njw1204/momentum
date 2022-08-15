@@ -30,4 +30,4 @@ function publishClock() {
 
 setInterval(() => {
   publishClock();
-}, 100);
+}, 50);
