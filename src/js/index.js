@@ -31,6 +31,7 @@ function showPage(type) {
 
 function initLoginPage() {
   saveObj("todos", null);
+  stopMusic();
   document.getElementById("login_form_name_input").value = "";
 }
 
@@ -66,13 +67,17 @@ function showWeather() {
     )
       .then((response) => response.json())
       .then((data) => {
-        if (data?.cod !== 200) {
+        if (
+          data?.cod !== 200 ||
+          !data?.weather?.length ||
+          typeof data?.main?.temp !== "number"
+        ) {
           return;
         }
 
         document.getElementById("weather").innerText = `${
           data.weather[0].main
-        } ${data.main.temp.toFixed(1)}℃, ${data.name}`;
+        } ${data.main.temp.toFixed(1)}℃, ${data.name || "Unknown"}`;
       });
   });
 }
@@ -167,15 +172,23 @@ function init() {
     }
   });
 
+  document.getElementById("theme_button").addEventListener("click", () => {
+    document.querySelector("body").classList.toggle("global-dark");
+  });
+
+  document.getElementById("music_button").addEventListener("click", () => {
+    toggleMusic();
+  });
+
   document.getElementById("logout_button").addEventListener("click", () => {
     mUsername = undefined;
     logout();
     showPage("login");
   });
 
-  const theme = Math.floor(Math.random() * 7);
+  const theme = Math.floor(Math.random() * 2);
 
-  if (theme === 0) {
+  if (theme === 1) {
     document.querySelector("body").classList.add("global-dark");
   }
 

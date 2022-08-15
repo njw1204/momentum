@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/storage.js" defer></script>
     <script src="js/clock.js" defer></script>
+    <script src="js/music.js" defer></script>
     <script src="js/user.js" defer></script>
     <script src="js/index.js" defer></script>
   </head>
@@ -27,7 +28,11 @@
     <div id="main_page" class="hidden">
       <div class="profile-nav">
         <div id="profile"></div>
-        <button type="button" id="logout_button">Logout</button>
+        <div>
+          <button type="button" id="theme_button">Theme</button>
+          <button type="button" id="music_button">Music</button>
+          <button type="button" id="logout_button">Logout</button>
+        </div>
       </div>
       <div id="digital_clock" class="digital-clock"></div>
       <div id="weather" class="weather"></div>
