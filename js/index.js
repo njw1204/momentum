@@ -66,13 +66,17 @@ function showWeather() {
     )
       .then((response) => response.json())
       .then((data) => {
-        if (data?.cod !== 200) {
+        if (
+          data?.cod !== 200 ||
+          !data?.weather?.length ||
+          typeof data?.main?.temp !== "number"
+        ) {
           return;
         }
 
         document.getElementById("weather").innerText = `${
           data.weather[0].main
-        } ${data.main.temp.toFixed(1)}℃, ${data.name}`;
+        } ${data.main.temp.toFixed(1)}℃, ${data.name || "Unknown"}`;
       });
   });
 }
@@ -165,6 +169,14 @@ function init() {
       saveObj("todos", todos);
       showTodoRecord(todoInfo.id, todoInfo.todo, todoInfo.finished);
     }
+  });
+
+  document.getElementById("theme_button").addEventListener("click", () => {
+    document.querySelector("body").classList.toggle("global-dark");
+  });
+
+  document.getElementById("music_button").addEventListener("click", () => {
+    toggleMusic();
   });
 
   document.getElementById("logout_button").addEventListener("click", () => {
